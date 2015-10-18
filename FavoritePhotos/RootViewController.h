@@ -1,15 +1,13 @@
 //
-//  ViewController.h
+//  RootViewController.h
 //  FavoritePhotos
 //
-//  Created by Daniel Barrido on 10/15/15.
+//  Created by Daniel Barrido on 10/17/15.
 //  Copyright © 2015 Daniel Barrido. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface RootViewController : UIViewController
 
 @end
-

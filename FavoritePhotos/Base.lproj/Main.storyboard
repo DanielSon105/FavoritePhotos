@@ -1,25 +1,179 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3hN-7D-dTa">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Search View Controller-->
+        <scene sceneID="dFL-6C-YVd">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="rvn-Ro-6ej" customClass="SearchViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="YsG-fV-QX1"/>
+                        <viewControllerLayoutGuide type="bottom" id="erM-tH-T84"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="3TO-c5-jer">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Fah-t7-Bsa">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YZs-ed-rA5">
+                                    <size key="itemSize" width="395" height="505"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CustomCellID" id="IfQ-S3-7ra" customClass="CustomCollectionViewCell">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="395" height="505"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B7k-94-Yr6">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="B7k-94-Yr6" firstAttribute="top" secondItem="IfQ-S3-7ra" secondAttribute="topMargin" constant="-8" id="1Vk-5W-0NB"/>
+                                            <constraint firstItem="B7k-94-Yr6" firstAttribute="leading" secondItem="IfQ-S3-7ra" secondAttribute="leadingMargin" constant="-8" id="TqW-NC-4gA"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="B7k-94-Yr6" secondAttribute="bottom" constant="-8" id="ngD-at-cbw"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="B7k-94-Yr6" secondAttribute="trailing" constant="-8" id="r6k-rw-zA9"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="subviews">
+                                                <exclude reference="B7k-94-Yr6"/>
+                                            </mask>
+                                            <mask key="constraints">
+                                                <exclude reference="1Vk-5W-0NB"/>
+                                                <exclude reference="TqW-NC-4gA"/>
+                                                <exclude reference="ngD-at-cbw"/>
+                                                <exclude reference="r6k-rw-zA9"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="widthClass=compact">
+                                            <mask key="subviews">
+                                                <include reference="B7k-94-Yr6"/>
+                                            </mask>
+                                            <mask key="constraints">
+                                                <include reference="1Vk-5W-0NB"/>
+                                                <include reference="TqW-NC-4gA"/>
+                                                <include reference="ngD-at-cbw"/>
+                                                <include reference="r6k-rw-zA9"/>
+                                            </mask>
+                                        </variation>
+                                        <connections>
+                                            <outlet property="customImageView" destination="B7k-94-Yr6" id="RQW-TN-f9V"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="rvn-Ro-6ej" id="nDm-Yr-Axj"/>
+                                    <outlet property="delegate" destination="rvn-Ro-6ej" id="jvO-v5-5xV"/>
+                                </connections>
+                            </collectionView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="gC5-7B-wEx">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gC5-7B-wEx" firstAttribute="leading" secondItem="Fah-t7-Bsa" secondAttribute="leading" id="4Xl-Xf-sXQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Fah-t7-Bsa" secondAttribute="trailing" constant="-15" id="CT6-kD-kgf"/>
+                            <constraint firstAttribute="trailing" secondItem="gC5-7B-wEx" secondAttribute="trailing" id="Ekx-f3-wN1"/>
+                            <constraint firstItem="Fah-t7-Bsa" firstAttribute="leading" secondItem="3TO-c5-jer" secondAttribute="leadingMargin" constant="-20" id="Fwz-CJ-rLJ"/>
+                            <constraint firstItem="Fah-t7-Bsa" firstAttribute="top" secondItem="gC5-7B-wEx" secondAttribute="bottom" id="Nhb-R5-xCb"/>
+                            <constraint firstItem="gC5-7B-wEx" firstAttribute="top" secondItem="3TO-c5-jer" secondAttribute="top" id="Xbj-4G-hfJ"/>
+                            <constraint firstItem="erM-tH-T84" firstAttribute="top" secondItem="Fah-t7-Bsa" secondAttribute="bottom" id="dEW-pO-UV0"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Fah-t7-Bsa"/>
+                                <exclude reference="gC5-7B-wEx"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="dEW-pO-UV0"/>
+                                <exclude reference="4Xl-Xf-sXQ"/>
+                                <exclude reference="Ekx-f3-wN1"/>
+                                <exclude reference="Xbj-4G-hfJ"/>
+                                <exclude reference="CT6-kD-kgf"/>
+                                <exclude reference="Fwz-CJ-rLJ"/>
+                                <exclude reference="Nhb-R5-xCb"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Fah-t7-Bsa"/>
+                                <include reference="gC5-7B-wEx"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="dEW-pO-UV0"/>
+                                <include reference="4Xl-Xf-sXQ"/>
+                                <include reference="Ekx-f3-wN1"/>
+                                <include reference="Xbj-4G-hfJ"/>
+                                <include reference="CT6-kD-kgf"/>
+                                <include reference="Fwz-CJ-rLJ"/>
+                                <include reference="Nhb-R5-xCb"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="9GX-cE-lts"/>
+                    <connections>
+                        <outlet property="searchBar" destination="gC5-7B-wEx" id="63h-ZL-rWT"/>
+                        <outlet property="searchResultCollectionView" destination="Fah-t7-Bsa" id="Q6K-eV-hF6"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kzU-u0-EOE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-522" y="-990"/>
+        </scene>
+        <!--Favorites View Controller-->
+        <scene sceneID="BDK-WU-0To">
+            <objects>
+                <viewController id="aqz-gA-LXf" customClass="FavoritesViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4Tk-QX-OIw"/>
+                        <viewControllerLayoutGuide type="bottom" id="yNI-yb-zpi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="BjX-No-UT0">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="wu1-kQ-Zou"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mjm-ua-HLR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-522" y="-1650"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="WBf-sH-J8o">
+            <objects>
+                <tabBarController id="3hN-7D-dTa" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="oeC-WD-RBC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="aqz-gA-LXf" kind="relationship" relationship="viewControllers" id="Wgc-l8-mNO"/>
+                        <segue destination="rvn-Ro-6ej" kind="relationship" relationship="viewControllers" id="m0v-mW-cN0"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UMF-4B-aA6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1452" y="-1318"/>
         </scene>
     </scenes>
 </document>
