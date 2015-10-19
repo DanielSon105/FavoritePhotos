@@ -15,10 +15,12 @@
 		E08C02441BD31E4D00A786FB /* instagramImage.m in Sources */ = {isa = PBXBuildFile; fileRef = E08C02431BD31E4D00A786FB /* instagramImage.m */; settings = {ASSET_TAGS = (); }; };
 		E08C024A1BD3265700A786FB /* FavoritesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E08C02491BD3265700A786FB /* FavoritesViewController.m */; settings = {ASSET_TAGS = (); }; };
 		E08C024D1BD3267500A786FB /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E08C024C1BD3267500A786FB /* SearchViewController.m */; settings = {ASSET_TAGS = (); }; };
-		E08C02501BD32A0E00A786FB /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E08C024F1BD32A0E00A786FB /* RootViewController.m */; settings = {ASSET_TAGS = (); }; };
 		E08C02531BD3301C00A786FB /* CustomCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E08C02521BD3301C00A786FB /* CustomCollectionViewCell.m */; settings = {ASSET_TAGS = (); }; };
 		E08C02591BD33B8300A786FB /* RetrieveDataFromInstagramAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = E08C02581BD33B8300A786FB /* RetrieveDataFromInstagramAPI.m */; settings = {ASSET_TAGS = (); }; };
 		E0EB80FF1BD35EC2004A8315 /* success.jpg in Resources */ = {isa = PBXBuildFile; fileRef = E0EB80FE1BD35EC2004A8315 /* success.jpg */; settings = {ASSET_TAGS = (); }; };
+		E0EB81021BD378C9004A8315 /* star_PNG1593.png in Resources */ = {isa = PBXBuildFile; fileRef = E0EB81001BD378C9004A8315 /* star_PNG1593.png */; settings = {ASSET_TAGS = (); }; };
+		E0EB81031BD378C9004A8315 /* 150px-Blue_star_unboxed.png in Resources */ = {isa = PBXBuildFile; fileRef = E0EB81011BD378C9004A8315 /* 150px-Blue_star_unboxed.png */; settings = {ASSET_TAGS = (); }; };
+		E0EB81061BD38549004A8315 /* NDCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = E0EB81051BD38549004A8315 /* NDCollectionViewFlowLayout.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,13 +38,15 @@
 		E08C02491BD3265700A786FB /* FavoritesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritesViewController.m; sourceTree = "<group>"; };
 		E08C024B1BD3267500A786FB /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		E08C024C1BD3267500A786FB /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
-		E08C024E1BD32A0E00A786FB /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		E08C024F1BD32A0E00A786FB /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		E08C02511BD3301C00A786FB /* CustomCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCollectionViewCell.h; sourceTree = "<group>"; };
 		E08C02521BD3301C00A786FB /* CustomCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCollectionViewCell.m; sourceTree = "<group>"; };
 		E08C02571BD33B8300A786FB /* RetrieveDataFromInstagramAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RetrieveDataFromInstagramAPI.h; path = ../RetrieveDataFromInstagramAPI.h; sourceTree = "<group>"; };
 		E08C02581BD33B8300A786FB /* RetrieveDataFromInstagramAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RetrieveDataFromInstagramAPI.m; path = ../RetrieveDataFromInstagramAPI.m; sourceTree = "<group>"; };
 		E0EB80FE1BD35EC2004A8315 /* success.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = success.jpg; path = ../../../../../success.jpg; sourceTree = "<group>"; };
+		E0EB81001BD378C9004A8315 /* star_PNG1593.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = star_PNG1593.png; path = ../../../../../../Downloads/star_PNG1593.png; sourceTree = "<group>"; };
+		E0EB81011BD378C9004A8315 /* 150px-Blue_star_unboxed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "150px-Blue_star_unboxed.png"; path = "../../../../../../Downloads/150px-Blue_star_unboxed.png"; sourceTree = "<group>"; };
+		E0EB81041BD38549004A8315 /* NDCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NDCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		E0EB81051BD38549004A8315 /* NDCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NDCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +66,8 @@
 				E08C01F71BD04CE500A786FB /* FavoritePhotos */,
 				E08C01F61BD04CE500A786FB /* Products */,
 				E0EB80FE1BD35EC2004A8315 /* success.jpg */,
+				E0EB81001BD378C9004A8315 /* star_PNG1593.png */,
+				E0EB81011BD378C9004A8315 /* 150px-Blue_star_unboxed.png */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,10 +85,10 @@
 				E08C01FB1BD04CE500A786FB /* AppDelegate.h */,
 				E08C01FC1BD04CE500A786FB /* AppDelegate.m */,
 				E08C02011BD04CE500A786FB /* Main.storyboard */,
+				E0EB81041BD38549004A8315 /* NDCollectionViewFlowLayout.h */,
+				E0EB81051BD38549004A8315 /* NDCollectionViewFlowLayout.m */,
 				E08C02511BD3301C00A786FB /* CustomCollectionViewCell.h */,
 				E08C02521BD3301C00A786FB /* CustomCollectionViewCell.m */,
-				E08C024E1BD32A0E00A786FB /* RootViewController.h */,
-				E08C024F1BD32A0E00A786FB /* RootViewController.m */,
 				E08C02571BD33B8300A786FB /* RetrieveDataFromInstagramAPI.h */,
 				E08C02581BD33B8300A786FB /* RetrieveDataFromInstagramAPI.m */,
 				E08C02481BD3265700A786FB /* FavoritesViewController.h */,
@@ -164,6 +170,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0EB81031BD378C9004A8315 /* 150px-Blue_star_unboxed.png in Resources */,
+				E0EB81021BD378C9004A8315 /* star_PNG1593.png in Resources */,
 				E08C02081BD04CE500A786FB /* LaunchScreen.storyboard in Resources */,
 				E08C02051BD04CE500A786FB /* Assets.xcassets in Resources */,
 				E08C02031BD04CE500A786FB /* Main.storyboard in Resources */,
@@ -180,7 +188,7 @@
 			files = (
 				E08C02441BD31E4D00A786FB /* instagramImage.m in Sources */,
 				E08C024A1BD3265700A786FB /* FavoritesViewController.m in Sources */,
-				E08C02501BD32A0E00A786FB /* RootViewController.m in Sources */,
+				E0EB81061BD38549004A8315 /* NDCollectionViewFlowLayout.m in Sources */,
 				E08C01FD1BD04CE500A786FB /* AppDelegate.m in Sources */,
 				E08C02531BD3301C00A786FB /* CustomCollectionViewCell.m in Sources */,
 				E08C02591BD33B8300A786FB /* RetrieveDataFromInstagramAPI.m in Sources */,

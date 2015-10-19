@@ -13,7 +13,7 @@
 
 - (instancetype)initWithContentsOfDictionary:(NSDictionary *)eventDictionary;
 
-@property NSURL *imageURL;
+@property NSString *imageURL;
 @property UIImage *image;
 
 @end

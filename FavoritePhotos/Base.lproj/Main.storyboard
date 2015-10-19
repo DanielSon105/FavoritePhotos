@@ -18,10 +18,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Fah-t7-Bsa">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Fah-t7-Bsa">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YZs-ed-rA5">
-                                    <size key="itemSize" width="395" height="505"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Lth-XY-ySj">
+                                    <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -37,35 +37,67 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="B7k-94-Yr6">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OID-IR-N4K">
+                                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="B4Z-UW-GhF"/>
+                                                        <constraint firstAttribute="height" constant="40" id="qqf-h9-DCt"/>
+                                                    </constraints>
+                                                    <state key="normal" image="150px-Blue_star_unboxed.png"/>
+                                                    <variation key="default">
+                                                        <mask key="constraints">
+                                                            <exclude reference="B4Z-UW-GhF"/>
+                                                            <exclude reference="qqf-h9-DCt"/>
+                                                        </mask>
+                                                    </variation>
+                                                    <variation key="widthClass=compact">
+                                                        <mask key="constraints">
+                                                            <include reference="B4Z-UW-GhF"/>
+                                                            <include reference="qqf-h9-DCt"/>
+                                                        </mask>
+                                                    </variation>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <color key="backgroundColor" red="0.40000000600000002" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="B7k-94-Yr6" firstAttribute="top" secondItem="IfQ-S3-7ra" secondAttribute="topMargin" constant="-8" id="1Vk-5W-0NB"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="OID-IR-N4K" secondAttribute="bottom" constant="20" id="ALa-Pv-HTN">
+                                                <variation key="widthClass=compact" constant="0.0"/>
+                                            </constraint>
                                             <constraint firstItem="B7k-94-Yr6" firstAttribute="leading" secondItem="IfQ-S3-7ra" secondAttribute="leadingMargin" constant="-8" id="TqW-NC-4gA"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="B7k-94-Yr6" secondAttribute="bottom" constant="-8" id="ngD-at-cbw"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="B7k-94-Yr6" secondAttribute="trailing" constant="-8" id="r6k-rw-zA9"/>
+                                            <constraint firstItem="OID-IR-N4K" firstAttribute="centerX" secondItem="IfQ-S3-7ra" secondAttribute="centerX" id="xnk-zU-ffb"/>
                                         </constraints>
+                                        <size key="customSize" width="395" height="505"/>
                                         <variation key="default">
                                             <mask key="subviews">
                                                 <exclude reference="B7k-94-Yr6"/>
+                                                <exclude reference="OID-IR-N4K"/>
                                             </mask>
                                             <mask key="constraints">
                                                 <exclude reference="1Vk-5W-0NB"/>
                                                 <exclude reference="TqW-NC-4gA"/>
                                                 <exclude reference="ngD-at-cbw"/>
                                                 <exclude reference="r6k-rw-zA9"/>
+                                                <exclude reference="ALa-Pv-HTN"/>
+                                                <exclude reference="xnk-zU-ffb"/>
                                             </mask>
                                         </variation>
                                         <variation key="widthClass=compact">
                                             <mask key="subviews">
                                                 <include reference="B7k-94-Yr6"/>
+                                                <include reference="OID-IR-N4K"/>
                                             </mask>
                                             <mask key="constraints">
                                                 <include reference="1Vk-5W-0NB"/>
                                                 <include reference="TqW-NC-4gA"/>
                                                 <include reference="ngD-at-cbw"/>
                                                 <include reference="r6k-rw-zA9"/>
+                                                <include reference="ALa-Pv-HTN"/>
+                                                <include reference="xnk-zU-ffb"/>
                                             </mask>
                                         </variation>
                                         <connections>
@@ -176,4 +208,7 @@
             <point key="canvasLocation" x="-1452" y="-1318"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="150px-Blue_star_unboxed.png" width="150" height="150"/>
+    </resources>
 </document>

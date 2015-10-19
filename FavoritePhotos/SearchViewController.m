@@ -9,9 +9,9 @@
 #import "SearchViewController.h"
 #import "CustomCollectionViewCell.h"
 #import "instagramImage.h"
+#import "NDCollectionViewFlowLayout.h"
 
-@interface SearchViewController ()<UICollectionViewDataSource,UICollectionViewDelegate, UISearchBarDelegate>
-
+@interface SearchViewController ()<UICollectionViewDataSource,UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UISearchBarDelegate>
 
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 @property NSString *searchString;
@@ -29,15 +29,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NDCollectionViewFlowLayout *flowLayout;
+    flowLayout = [NDCollectionViewFlowLayout new];
     self.searchBar.delegate = self; // searchBar delegation - include <>!
     self.isSearching = false; // initial value for BOOL
 
     self.searchString = @"colts";
+
+
     self.arrayOfinstagramImages = [NSMutableArray new];
     [self searchForPhotos];
     // Do any additional setup after loading the view.
 }
-
 
 #pragma mark - Search For Photos
 
@@ -49,23 +52,21 @@
 
        self.searchResultDictionary = [NSDictionary new];
        self.searchResultArrayOfDictionaries = [NSMutableArray new];
-
        self.searchResultDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:nil];
 
        self.searchResultArrayOfDictionaries = [self.searchResultDictionary objectForKey:@"data"];
 
-                NSLog(@"%@", self.searchResultArrayOfDictionaries);
+        NSLog(@"%@", self.searchResultArrayOfDictionaries);
         for (NSDictionary *temp in self.searchResultArrayOfDictionaries) {
             instagramImage *newImage = [[instagramImage alloc] initWithContentsOfDictionary:temp];
             [self.arrayOfinstagramImages addObject:newImage];
-//            NSLog(@"%@", self.arrayOfinstagramImages);
+            NSLog(@"%@", temp[@"images"][@"standard_resolution"][@"url"]);
         }
 
+        NSLog(@"%@", self.arrayOfinstagramImages);
 
         dispatch_async(dispatch_get_main_queue(), ^{
-
-            [self.searchResultCollectionView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:YES];
-
+            [self.searchResultCollectionView reloadData];
         });
     }];
     [task resume];
@@ -82,7 +83,7 @@
 
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     {
-        if (self.arrayOfinstagramImages.count == 0)
+        if (self.arrayOfinstagramImages.count < 1)
         {
             return 1;
         }
@@ -99,17 +100,26 @@
 
 -(CustomCollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     CustomCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"CustomCellID" forIndexPath:indexPath];
+//    UICollectionViewLayoutAttributes* attributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:indexPath];
+//    [cell applyLayoutAttributes:attributes];
     if (self.arrayOfinstagramImages.count > 0)
     {
-    instagramImage *instagramImageInstance = self.arrayOfinstagramImages[indexPath.row];
-    cell.customImageView.image = instagramImageInstance.image;
+        instagramImage *instagramImageInstance = self.arrayOfinstagramImages[indexPath.row];
+        cell.customImageView.image = instagramImageInstance.image;
+        NSLog(@"image = %@ ", instagramImageInstance.image);
+        cell.backgroundColor = [UIColor redColor];
     }
     else
     {
         cell.customImageView.image = [UIImage imageNamed:@"success"];
+        cell.backgroundColor = [UIColor greenColor];
     }
 
     return cell;
+}
+
+-(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    return CGSizeMake(self.view.frame.size.width, self.view.frame.size.width);
 }
 
 #pragma mark - UISearchBarDelegate
@@ -124,6 +134,8 @@
 
     // reloadData or search won't be dynamic
 }
+
+
 /*
 #pragma mark - Navigation
 

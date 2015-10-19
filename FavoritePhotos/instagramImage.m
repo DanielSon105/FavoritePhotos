@@ -17,7 +17,7 @@
     {
         self.imageURL = dictionary[@"images"][@"standard_resolution"][@"url"];
         self.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:self.imageURL]]];
-    }
+        NSLog(@"self.imageUR: = %@", self.imageURL);    }
 
     return self;
 }
